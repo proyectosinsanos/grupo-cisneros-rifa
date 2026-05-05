@@ -186,20 +186,33 @@ export default function AdminPage() {
     setSlotName('')
   }
 
+  const handleLogout = async () => {
+    await fetch('/api/admin/auth', { method: 'DELETE' })
+    window.location.href = '/admin/login'
+  }
+
   // ─── Render ──────────────────────────────────────────────────────
   return (
     <div className="gradient-bg min-h-screen">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
 
         {/* ── Header ── */}
-        <div className="mb-8 animate-fade-up">
-          <p className="text-muted text-xs uppercase tracking-[0.18em] mb-1.5">
-            Panel Administrador
-          </p>
-          <h1 className="font-heading text-4xl sm:text-5xl text-foreground tracking-widest">
-            RIFA GRUPO{' '}
-            <span className="text-accent">CISNEROS</span>
-          </h1>
+        <div className="flex items-start justify-between mb-8 animate-fade-up">
+          <div>
+            <p className="text-muted text-xs uppercase tracking-[0.18em] mb-1.5">
+              Panel Administrador
+            </p>
+            <h1 className="font-heading text-4xl sm:text-5xl text-foreground tracking-widest">
+              RIFA GRUPO{' '}
+              <span className="text-accent">CISNEROS</span>
+            </h1>
+          </div>
+          <button
+            onClick={handleLogout}
+            className="text-muted/50 text-xs hover:text-muted transition-colors mt-1 flex items-center gap-1"
+          >
+            Salir →
+          </button>
         </div>
 
         {/* ── Stats ── */}

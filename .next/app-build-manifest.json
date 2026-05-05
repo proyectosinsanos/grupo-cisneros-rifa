@@ -11,10 +11,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
-    "/api/register/route": [
+    "/admin/login/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/api/register/route.js"
+      "static/chunks/app/admin/login/page.js"
+    ],
+    "/api/admin/auth/route": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/api/admin/auth/route.js"
     ],
     "/admin/page": [
       "static/chunks/webpack.js",
