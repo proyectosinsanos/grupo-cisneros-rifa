@@ -150,7 +150,6 @@ export default function Home() {
             </p>
             <p className="text-muted text-sm leading-relaxed mb-6">
               Tu participación en la rifa ha sido confirmada.
-              El ganador será anunciado en nuestras redes sociales.
             </p>
             <div className="bg-ink/60 rounded-2xl px-6 py-4 border border-border/30">
               <p className="text-muted text-xs uppercase tracking-widest mb-1">Estado</p>
