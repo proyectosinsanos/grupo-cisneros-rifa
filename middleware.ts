@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server'
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
   const session = request.cookies.get('admin_session')?.value
-  const token = process.env.NEXT_PUBLIC_ADMIN_SESSION_TOKEN
+  const token = process.env.ADMIN_SESSION_TOKEN
   const isAuthenticated = !!token && session === token
 
   // Si ya está autenticado y va al login, redirigir al panel
